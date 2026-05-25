@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pratyush Prakhar — résumé. Application and cloud security engineer with AI specialization." />
+  <meta name="robots" content="index, follow" />
+  <title>Résumé · Pratyush Prakhar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:ROND@0..100&wght@100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --base:    oklch(0.10 0.008 65);
+      --raise:   oklch(0.13 0.011 65);
+      --raise-2: oklch(0.17 0.014 65);
+      --line:    oklch(0.30 0.020 60);
+      --line-2:  oklch(0.22 0.018 60);
+      --ink:     oklch(0.94 0.008 75);
+      --ink-3:   oklch(0.58 0.014 60);
+      --ink-4:   oklch(0.42 0.014 60);
+      --amber:   oklch(0.80 0.17 150);
+      --expo:    cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background: var(--base); color: var(--ink); font-family: 'JetBrains Mono', monospace; }
+
+    .bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 24px; border-bottom: 1px solid var(--line-2);
+      background: var(--raise); position: sticky; top: 0; z-index: 10;
+    }
+    .bar-left { display: flex; align-items: baseline; gap: 14px; }
+    .bar-title {
+      font-family: 'Doto', monospace; font-variation-settings: 'ROND' 100;
+      font-weight: 700; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--ink); text-shadow: 0 0 14px oklch(0.80 0.17 150 / 0.35);
+    }
+    .bar-title .accent { color: var(--amber); }
+    .bar-sub { font-size: 0.62rem; color: var(--ink-4); letter-spacing: 0.06em; text-transform: uppercase; }
+    .bar-actions { display: flex; gap: 8px; align-items: center; }
+    .back {
+      font-size: 0.66rem; color: var(--ink-3); letter-spacing: 0.06em;
+      padding: 8px 14px; text-decoration: none; border: 1px solid var(--line);
+      transition: color 200ms var(--expo), border-color 200ms var(--expo), transform 200ms var(--expo);
+    }
+    .back:hover { color: var(--amber); border-color: var(--amber); transform: translateY(-1px); }
+    .btn-ghost {
+      font-size: 0.66rem; color: var(--ink-3); letter-spacing: 0.06em;
+      padding: 8px 14px; background: transparent; border: 1px solid var(--line);
+      cursor: pointer; transition: color 200ms var(--expo), border-color 200ms var(--expo), transform 200ms var(--expo);
+      text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+    }
+    .btn-ghost:hover { color: var(--amber); border-color: var(--amber); transform: translateY(-1px); }
+    .btn-primary {
+      font-size: 0.66rem; color: var(--base); background: var(--amber);
+      letter-spacing: 0.06em; padding: 9px 18px; border: 1px solid var(--amber);
+      cursor: pointer; transition: transform 200ms var(--expo);
+      text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    .viewer {
+      height: calc(100vh - 64px); width: 100%;
+      background: oklch(0.16 0.010 65);
+      position: relative;
+    }
+    .viewer object, .viewer iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+    .fallback {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 18px; padding: 24px; text-align: center;
+      pointer-events: none; opacity: 0;
+    }
+    .fallback.show { opacity: 1; pointer-events: auto; }
+    .fb-title {
+      font-family: 'Doto', monospace; font-variation-settings: 'ROND' 100;
+      font-weight: 700; font-size: 1.4rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink);
+    }
+    .fb-note { font-size: 0.78rem; color: var(--ink-3); max-width: 44ch; line-height: 1.55; }
+
+    @media (max-width: 620px) {
+      .bar { padding: 12px 14px; flex-wrap: wrap; gap: 10px; }
+      .bar-sub { display: none; }
+      .btn-primary, .btn-ghost, .back { padding: 7px 10px; font-size: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <div class="bar-left">
+      <a href="/" class="back" rel="noopener noreferrer">← home</a>
+      <div>
+        <div class="bar-title">RÉSUMÉ · <span class="accent">PRATYUSH PRAKHAR</span></div>
+        <div class="bar-sub">Application &amp; cloud security · AI specialization · 2 pages</div>
+      </div>
+    </div>
+    <div class="bar-actions">
+      <a class="btn-ghost" href="/assets/Resume_Prakhar_Pratyush.pdf" target="_blank" rel="noopener">↗ open in new tab</a>
+      <a class="btn-primary" href="/assets/Resume_Prakhar_Pratyush.pdf" download="Pratyush_Prakhar_Resume.pdf">↓ download pdf</a>
+    </div>
+  </div>
+
+  <div class="viewer">
+    <object data="/assets/Resume_Prakhar_Pratyush.pdf#view=FitH&toolbar=1&navpanes=0" type="application/pdf">
+      <iframe src="/assets/Resume_Prakhar_Pratyush.pdf#view=FitH" title="Pratyush Prakhar — Résumé"></iframe>
+    </object>
+    <div class="fallback" id="fallback">
+      <div class="fb-title">PDF preview unavailable</div>
+      <div class="fb-note">Your browser cannot embed PDFs inline. Download or open the file directly to read it.</div>
+      <div style="display: flex; gap: 10px;">
+        <a class="btn-ghost" href="/assets/Resume_Prakhar_Pratyush.pdf" target="_blank" rel="noopener">↗ open</a>
+        <a class="btn-primary" href="/assets/Resume_Prakhar_Pratyush.pdf" download="Pratyush_Prakhar_Resume.pdf">↓ download</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* Show fallback only if the object failed to load any content after a beat */
+    setTimeout(() => {
+      const obj = document.querySelector('.viewer object');
+      if (!obj) return;
+      const visible = obj.getBoundingClientRect().height > 60;
+      if (!visible) document.getElementById('fallback').classList.add('show');
+    }, 1400);
+  </script>
+</body>
+</html>
